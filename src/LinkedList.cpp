@@ -64,4 +64,54 @@ void LinkedList::insertAtEnd(int value)
     }
 }
 
+// Function to delete the first node in the list
+void LinkedList::deleteFirstNode()
+{
+    // If the list is empty, there's nothing to delete
+    if (this->head == nullptr)
+    {
+        return;
+    }
+
+    // Store the current head node to delete it later
+    Node* temp = this->head;
+
+    // Update the head pointer to point to the second node
+    this->head = this->head->next;
+
+    delete temp;
+}
+
+// Function to delete the last node in the list
+void LinkedList::deleteLastNode()
+{
+    // If the list is empty, there's nothing to delete
+    if (this->head == nullptr)
+    {
+        return;
+    }
+
+    // If there's only one node in the list
+    if (this->head->next == nullptr)
+    {
+        delete this->head;
+        this->head = nullptr;
+        return;
+    }
+
+    // Traverse teh list to find the second-to-last node
+    Node* temp = this->head;
+    while(temp->next->next != nullptr)
+    {
+        temp = temp->next;
+    }
+
+    // Delete the last node
+    delete temp->next;
+
+    // Set the next pointer of the second-to-last node to nullptr
+    temp->next = nullptr;
+
+}
+
 // TODO: Implement other linked list operations
