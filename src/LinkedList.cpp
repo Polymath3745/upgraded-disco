@@ -11,7 +11,7 @@ LinkedList::LinkedList()
 // Destructor to free memory when the list is deleted
 LinkedList::~LinkedList()
 {
-    Node* current = head;
+    Node* current = this->head;
     while (current != nullptr)
     {
         Node* next = current->next;
@@ -24,20 +24,44 @@ LinkedList::~LinkedList()
 void LinkedList::insertAtBeginning(int value)
 {
     Node* newNode = new Node(value);
-    newNode->next = head;
-    head = newNode;
+    newNode->next = this->head;
+    this->head = newNode;
 }
 
 // Function to print the elements of the list
 void LinkedList::printList() const
 {
-    Node* temp = head;
+    Node* temp = this->head;
     while (temp != nullptr)
     {
         std::cout << temp->data << " ";
         temp = temp->next;
     }
     std::cout << std::endl;
+}
+
+// Function to insert a new node at the end of the list
+void LinkedList::insertAtEnd(int value)
+{
+    // Create a new node
+    Node* newNode = new Node(value);
+
+    // If the list is empty, make the new node the head
+    if (this->head == nullptr)
+    {
+        this->head = newNode;
+    }
+
+    else
+    {
+        Node* temp = this->head;
+        while(temp->next != nullptr)
+        {
+            temp = temp->next;
+        }
+
+        temp->next = newNode;
+    }
 }
 
 // TODO: Implement other linked list operations
