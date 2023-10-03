@@ -1,0 +1,43 @@
+[
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/test/test_main.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/test/test_main.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/test/test_main.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/test/StudentTest.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/test/StudentTest.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/test/StudentTest.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/src/Student.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/Student.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/Student.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/src/LinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/main.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/Student.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/Student.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/Student.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/LinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp"
+}
+]
