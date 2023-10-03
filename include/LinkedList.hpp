@@ -32,6 +32,8 @@ class LinkedList
         // Function to insert a new node at the end of the list
         void insertAtEnd(int value);
 
+        // Function to delete the first node in the list
+        void deleteFirstNode();
         // TODO : Declare other linked list operations
 
     private:
