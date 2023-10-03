@@ -29,6 +29,9 @@ class LinkedList
         // Function to print the elements of the list
         void printList() const;
 
+        // Function to insert a new node at the end of the list
+        void LinkedList::insertAtEnd(int value);
+        
         // TODO : Declare other linked list operations
 
     private:
