@@ -30,8 +30,8 @@ class LinkedList
         void printList() const;
 
         // Function to insert a new node at the end of the list
-        void LinkedList::insertAtEnd(int value);
-        
+        void insertAtEnd(int value);
+
         // TODO : Declare other linked list operations
 
     private:
