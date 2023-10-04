@@ -12,6 +12,7 @@ int main()
     list.insertAtBeginning(7);
     list.insertAtBeginning(8);
 
+    list.printList();
     bool found = list.search(7);
     int numOfNodes = list.count();
     list.reverse();
