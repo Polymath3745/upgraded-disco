@@ -169,4 +169,19 @@ bool LinkedList::search(int key) const
     // Node with the given key not found
     return false;
 }
+
+int LinkedList::count()
+{
+    Node* temp = this->head; // Start from the head of the linked list
+    int count = 0; // Inistialize a counter to keep track
+
+    // Traverse the list and count the nodes
+    while (temp != nullptr)
+    {
+        count++; // Increment the counter for each node
+        temp = temp->next; // Move to the next node
+    }
+
+    return count; // Return the total number of nodes in the list
+}
 // TODO: Implement other linked list operations

@@ -43,6 +43,8 @@ class LinkedList
 
         // Function to search for certain node in the list
         bool search(int key) const;
+
+        int count();
         // TODO : Declare other linked list operations
 
     private:
