@@ -101,6 +101,13 @@ build CMakeFiles/TEST.dir/src/LinkedList.cpp.o: CXX_COMPILER__TEST ../src/Linked
   OBJECT_DIR = CMakeFiles/TEST.dir
   OBJECT_FILE_DIR = CMakeFiles/TEST.dir/src
 
+build CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o: CXX_COMPILER__TEST ../src/DoublyLinkedList.cpp || cmake_object_order_depends_target_TEST
+  DEP_FILE = CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I../include -I../src
+  OBJECT_DIR = CMakeFiles/TEST.dir
+  OBJECT_FILE_DIR = CMakeFiles/TEST.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target TEST
@@ -109,7 +116,7 @@ build CMakeFiles/TEST.dir/src/LinkedList.cpp.o: CXX_COMPILER__TEST ../src/Linked
 #############################################
 # Link the executable TEST
 
-build TEST: CXX_EXECUTABLE_LINKER__TEST CMakeFiles/TEST.dir/test/test_main.cpp.o CMakeFiles/TEST.dir/test/StudentTest.cpp.o CMakeFiles/TEST.dir/src/Student.cpp.o CMakeFiles/TEST.dir/src/LinkedList.cpp.o | /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a
+build TEST: CXX_EXECUTABLE_LINKER__TEST CMakeFiles/TEST.dir/test/test_main.cpp.o CMakeFiles/TEST.dir/test/StudentTest.cpp.o CMakeFiles/TEST.dir/src/Student.cpp.o CMakeFiles/TEST.dir/src/LinkedList.cpp.o CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o | /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a
   FLAGS = -g
   LINK_LIBRARIES = /usr/local/lib/libgtest_main.a  /usr/local/lib/libgtest.a  -lpthread
   OBJECT_DIR = CMakeFiles/TEST.dir
@@ -148,6 +155,13 @@ build CMakeFiles/MAIN.dir/src/LinkedList.cpp.o: CXX_COMPILER__MAIN ../src/Linked
   OBJECT_DIR = CMakeFiles/MAIN.dir
   OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/src
 
+build CMakeFiles/MAIN.dir/src/DoublyLinkedList.cpp.o: CXX_COMPILER__MAIN ../src/DoublyLinkedList.cpp || cmake_object_order_depends_target_MAIN
+  DEP_FILE = CMakeFiles/MAIN.dir/src/DoublyLinkedList.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I../include -I../src
+  OBJECT_DIR = CMakeFiles/MAIN.dir
+  OBJECT_FILE_DIR = CMakeFiles/MAIN.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MAIN
@@ -156,7 +170,7 @@ build CMakeFiles/MAIN.dir/src/LinkedList.cpp.o: CXX_COMPILER__MAIN ../src/Linked
 #############################################
 # Link the executable MAIN
 
-build MAIN: CXX_EXECUTABLE_LINKER__MAIN CMakeFiles/MAIN.dir/src/main.cpp.o CMakeFiles/MAIN.dir/src/Student.cpp.o CMakeFiles/MAIN.dir/src/LinkedList.cpp.o
+build MAIN: CXX_EXECUTABLE_LINKER__MAIN CMakeFiles/MAIN.dir/src/main.cpp.o CMakeFiles/MAIN.dir/src/Student.cpp.o CMakeFiles/MAIN.dir/src/LinkedList.cpp.o CMakeFiles/MAIN.dir/src/DoublyLinkedList.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/MAIN.dir
   POST_BUILD = :

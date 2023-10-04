@@ -40,14 +40,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MAIN::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MAIN-Debug-ef6752a5f7ba27f3d6c5.json",
+					"jsonFile" : "target-MAIN-Debug-7c8ab3049797e1efa08e.json",
 					"name" : "MAIN",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "TEST::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-TEST-Debug-b50d52846ba326ecadf4.json",
+					"jsonFile" : "target-TEST-Debug-2f37e2b2e2a2b5309e87.json",
 					"name" : "TEST",
 					"projectIndex" : 0
 				}
