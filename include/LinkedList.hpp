@@ -35,7 +35,12 @@ class LinkedList
         // Function to delete the first node in the list
         void deleteFirstNode();
 
+        // Function to delete the last node in the list
         void deleteLastNode();
+
+        // Function to delete any node in the list
+        void deleteNode(int key);
+
         // TODO : Declare other linked list operations
 
     private:

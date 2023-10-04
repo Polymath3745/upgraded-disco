@@ -114,4 +114,44 @@ void LinkedList::deleteLastNode()
 
 }
 
+void LinkedList::deleteNode(int key)
+{
+    // If the list is empty, there's nothing to delete
+    if (this->head == nullptr)
+    {
+        return;
+    }
+
+    // Special case: if the node to be deleted is the head
+    if (this->head->data == key)
+    {
+        Node* temp = this->head;
+        this->head = this->head->next;
+        delete temp;
+
+        return;
+    }
+
+    // Traverse the list to find the node to be deleted and its previous node
+    Node* temp = this->head;
+    Node* prev = nullptr;
+    while(temp != nullptr && temp->data != key)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    // If the node was not found
+    if(temp == nullptr)
+    {
+        return;
+    }
+
+    // Adjust pointers to skip the node to be deleted
+    prev->next = temp->next;
+
+    // Delete the node
+    delete temp;
+}
+
 // TODO: Implement other linked list operations
