@@ -25,6 +25,12 @@
 
 {
   "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
   "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/main.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp",
   "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp"
 },
@@ -39,5 +45,11 @@
   "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
   "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/LinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp",
   "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/LinkedList.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/DoublyLinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp"
 }
 ]

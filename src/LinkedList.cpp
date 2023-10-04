@@ -99,7 +99,7 @@ void LinkedList::deleteLastNode()
         return;
     }
 
-    // Traverse teh list to find the second-to-last node
+    // Traverse the list to find the second-to-last node
     Node* temp = this->head;
     while(temp->next->next != nullptr)
     {
@@ -114,4 +114,92 @@ void LinkedList::deleteLastNode()
 
 }
 
+void LinkedList::deleteNode(int key)
+{
+    // If the list is empty, there's nothing to delete
+    if (this->head == nullptr)
+    {
+        return;
+    }
+
+    // Special case: if the node to be deleted is the head
+    if (this->head->data == key)
+    {
+        Node* temp = this->head;
+        this->head = this->head->next;
+        delete temp;
+
+        return;
+    }
+
+    // Traverse the list to find the node to be deleted and its previous node
+    Node* temp = this->head;
+    Node* prev = nullptr;
+    while(temp != nullptr && temp->data != key)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+
+    // If the node was not found
+    if(temp == nullptr)
+    {
+        return;
+    }
+
+    // Adjust pointers to skip the node to be deleted
+    prev->next = temp->next;
+
+    // Delete the node
+    delete temp;
+}
+
+bool LinkedList::search(int key) const
+{
+    Node* temp = head;
+    while (temp != nullptr)
+    {
+        if(temp->data == key)
+        {
+            // Found the node with the given key
+            return true;
+        }
+        temp = temp->next;
+    }
+    // Node with the given key not found
+    return false;
+}
+
+int LinkedList::count()
+{
+    Node* temp = this->head; // Start from the head of the linked list
+    int count = 0; // Inistialize a counter to keep track
+
+    // Traverse the list and count the nodes
+    while (temp != nullptr)
+    {
+        count++; // Increment the counter for each node
+        temp = temp->next; // Move to the next node
+    }
+
+    return count; // Return the total number of nodes in the list
+}
+
+void LinkedList::reverse()
+{
+    Node* prev = nullptr;
+    Node* current = this->head;
+    Node* next = nullptr;
+
+    // Traverse the list and reverse the pointers of each node
+    while(current != nullptr)
+    {
+        next = current->next; // Save the next node
+        current->next = prev; // Reverse the pointer
+        prev = current;       // Move the prev to the current node
+        current = next;       // Move current to the next node
+    }
+
+    this->head = prev;         // Set the head to the last node, which is now the first node
+}
 // TODO: Implement other linked list operations
