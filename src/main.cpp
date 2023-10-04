@@ -14,5 +14,7 @@ int main()
 
     bool found = list.search(7);
     int numOfNodes = list.count();
+    list.reverse();
+    list.printList();
     return 0;
 }

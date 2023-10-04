@@ -44,7 +44,12 @@ class LinkedList
         // Function to search for certain node in the list
         bool search(int key) const;
 
+        // Function to count nodes in a list
         int count();
+
+        // Function to reverse the linked list
+        void reverse();
+        
         // TODO : Declare other linked list operations
 
     private:

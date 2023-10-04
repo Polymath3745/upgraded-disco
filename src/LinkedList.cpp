@@ -184,4 +184,22 @@ int LinkedList::count()
 
     return count; // Return the total number of nodes in the list
 }
+
+void LinkedList::reverse()
+{
+    Node* prev = nullptr;
+    Node* current = this->head;
+    Node* next = nullptr;
+
+    // Traverse the list and reverse the pointers of each node
+    while(current != nullptr)
+    {
+        next = current->next; // Save the next node
+        current->next = prev; // Reverse the pointer
+        prev = current;       // Move the prev to the current node
+        current = next;       // Move current to the next node
+    }
+
+    this->head = prev;         // Set the head to the last node, which is now the first node
+}
 // TODO: Implement other linked list operations
