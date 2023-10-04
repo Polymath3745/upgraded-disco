@@ -154,4 +154,19 @@ void LinkedList::deleteNode(int key)
     delete temp;
 }
 
+bool LinkedList::search(int key) const
+{
+    Node* temp = head;
+    while (temp != nullptr)
+    {
+        if(temp->data == key)
+        {
+            // Found the node with the given key
+            return true;
+        }
+        temp = temp->next;
+    }
+    // Node with the given key not found
+    return false;
+}
 // TODO: Implement other linked list operations

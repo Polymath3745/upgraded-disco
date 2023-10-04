@@ -41,6 +41,8 @@ class LinkedList
         // Function to delete any node in the list
         void deleteNode(int key);
 
+        // Function to search for certain node in the list
+        bool search(int key) const;
         // TODO : Declare other linked list operations
 
     private:
