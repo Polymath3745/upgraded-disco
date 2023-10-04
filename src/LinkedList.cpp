@@ -99,7 +99,7 @@ void LinkedList::deleteLastNode()
         return;
     }
 
-    // Traverse teh list to find the second-to-last node
+    // Traverse the list to find the second-to-last node
     Node* temp = this->head;
     while(temp->next->next != nullptr)
     {
