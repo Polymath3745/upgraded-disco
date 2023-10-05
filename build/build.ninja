@@ -87,6 +87,13 @@ build CMakeFiles/TEST.dir/test/StudentTest.cpp.o: CXX_COMPILER__TEST ../test/Stu
   OBJECT_DIR = CMakeFiles/TEST.dir
   OBJECT_FILE_DIR = CMakeFiles/TEST.dir/test
 
+build CMakeFiles/TEST.dir/test/DoublyLinkedListTest.cpp.o: CXX_COMPILER__TEST ../test/DoublyLinkedListTest.cpp || cmake_object_order_depends_target_TEST
+  DEP_FILE = CMakeFiles/TEST.dir/test/DoublyLinkedListTest.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I../include -I../src
+  OBJECT_DIR = CMakeFiles/TEST.dir
+  OBJECT_FILE_DIR = CMakeFiles/TEST.dir/test
+
 build CMakeFiles/TEST.dir/src/Student.cpp.o: CXX_COMPILER__TEST ../src/Student.cpp || cmake_object_order_depends_target_TEST
   DEP_FILE = CMakeFiles/TEST.dir/src/Student.cpp.o.d
   FLAGS = -g
@@ -116,7 +123,7 @@ build CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o: CXX_COMPILER__TEST ../src/
 #############################################
 # Link the executable TEST
 
-build TEST: CXX_EXECUTABLE_LINKER__TEST CMakeFiles/TEST.dir/test/test_main.cpp.o CMakeFiles/TEST.dir/test/StudentTest.cpp.o CMakeFiles/TEST.dir/src/Student.cpp.o CMakeFiles/TEST.dir/src/LinkedList.cpp.o CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o | /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a
+build TEST: CXX_EXECUTABLE_LINKER__TEST CMakeFiles/TEST.dir/test/test_main.cpp.o CMakeFiles/TEST.dir/test/StudentTest.cpp.o CMakeFiles/TEST.dir/test/DoublyLinkedListTest.cpp.o CMakeFiles/TEST.dir/src/Student.cpp.o CMakeFiles/TEST.dir/src/LinkedList.cpp.o CMakeFiles/TEST.dir/src/DoublyLinkedList.cpp.o | /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a
   FLAGS = -g
   LINK_LIBRARIES = /usr/local/lib/libgtest_main.a  /usr/local/lib/libgtest.a  -lpthread
   OBJECT_DIR = CMakeFiles/TEST.dir
