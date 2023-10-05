@@ -31,6 +31,9 @@ class DoublyLinkedList
         // Function to print the list in reverse direction
         void printReverse();
 
+        // Function to delete a node in the list
+        void deleteNode(int key);
+
     private:
         Node* head; // Pointer to the first node in the linked list
         Node* tail; // Pointer to the last node in the linked list

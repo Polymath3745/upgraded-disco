@@ -42,3 +42,48 @@ void DoublyLinkedList::insertBeginning(int value)
         this->head = newNode;
     }
 }
+
+void DoublyLinkedList::deleteNode(int key)
+{
+    // If the list is empty
+    if(this->head == nullptr)
+    {
+        return;
+    }
+
+    // Special case: if the node to be deleted is the head
+    if (this->head->data == key)
+    {
+        Node* temp = this->head;
+        this->head = this->head->next;
+        delete temp;
+    }
+
+    // Special case: if the node to be deleted is the tail
+    if (this->tail->data == key)
+    {
+        Node* temp = this->tail;
+        this->tail = this->tail->prev;
+        delete temp;
+    }
+
+    // Traverse the list until the key is found
+    Node* temp = this->head;
+    while(temp != nullptr && temp->data != key)
+    {
+        temp = temp->next;
+    }
+
+    // If the node was not found 
+    if (temp == nullptr)
+    {
+        return;
+    }
+
+    // Update pointers
+    temp->prev->next = temp->next;
+    temp->next->prev = temp->prev;
+
+    // Delete the node
+    delete temp; 
+}
