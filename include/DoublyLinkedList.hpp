@@ -1,17 +1,17 @@
 #ifndef DOUBLYLINKEDLIST_HPP
 #define DOUBLYLINKEDLIST_HPP
 
-struct Node
+struct DoubleNode
 {
-    Node(int value)
+    DoubleNode(int value)
     : data(value), prev(nullptr), next(nullptr)
     {
 
     }
 
     int data;
-    Node* prev;
-    Node* next;
+    DoubleNode* prev;
+    DoubleNode* next;
 };
 
 class DoublyLinkedList
@@ -36,8 +36,11 @@ class DoublyLinkedList
 
         // Function to search for a node in the list
         bool search(int key);
+
+        // Function for finding the 'nth' node from the end
+        DoubleNode* getNthNodeFromEnd(int n);
     private:
-        Node* head; // Pointer to the first node in the linked list
-        Node* tail; // Pointer to the last node in the linked list
+        DoubleNode* head; // Pointer to the first node in the linked list
+        DoubleNode* tail; // Pointer to the last node in the linked list
 };
 #endif

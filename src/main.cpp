@@ -1,21 +1,16 @@
 #include "LinkedList.hpp"
+#include "DoublyLinkedList.hpp"
 #include <iostream>
 
 int main()
 {
-    // Create a LinkedList object
-    LinkedList list;
+    // Create the doubly linked list object
+    DoublyLinkedList list;
 
-    // Insert elements at the beginning of the list
-    list.insertAtBeginning(3);
-    list.insertAtBeginning(5);
-    list.insertAtBeginning(7);
-    list.insertAtBeginning(8);
-
-    list.printList();
-    bool found = list.search(7);
-    int numOfNodes = list.count();
-    list.reverse();
-    list.printList();
+    list.insertBeginning(3);
+    list.insertBeginning(2);
+    list.insertBeginning(1);
+    list.getNthNodeFromEnd(2);
+    
     return 0;
 }

@@ -9,7 +9,7 @@ DoublyLinkedList::DoublyLinkedList()
 
 void DoublyLinkedList::insertEnd(int value)
 {
-    Node* newNode = new Node(value);
+    DoubleNode* newNode = new DoubleNode(value);
     if (this->head == nullptr)
     {
         // If the lsit is empty, set the new node ast both head and tail
@@ -28,7 +28,7 @@ void DoublyLinkedList::insertEnd(int value)
 
 void DoublyLinkedList::insertBeginning(int value)
 {
-    Node* newNode = new Node(value);
+    DoubleNode* newNode = new DoubleNode(value);
     if(this->head == nullptr)
     {
         // If the list is empty, set the new node as both head and tail
@@ -54,7 +54,7 @@ void DoublyLinkedList::deleteNode(int key)
     // Special case: if the node to be deleted is the head
     if (this->head->data == key)
     {
-        Node* temp = this->head;
+        DoubleNode* temp = this->head;
         this->head = this->head->next;
         delete temp;
     }
@@ -62,13 +62,13 @@ void DoublyLinkedList::deleteNode(int key)
     // Special case: if the node to be deleted is the tail
     if (this->tail->data == key)
     {
-        Node* temp = this->tail;
+        DoubleNode* temp = this->tail;
         this->tail = this->tail->prev;
         delete temp;
     }
 
     // Traverse the list until the key is found
-    Node* temp = this->head;
+    DoubleNode* temp = this->head;
     while(temp != nullptr && temp->data != key)
     {
         temp = temp->next;
@@ -97,7 +97,7 @@ bool DoublyLinkedList::search(int key)
     }
 
     // Traverse the list and search for node
-    Node* temp = this->tail;
+    DoubleNode* temp = this->tail;
     while(temp != nullptr && temp->data != key)
     {
         temp = temp->prev;
@@ -114,4 +114,31 @@ bool DoublyLinkedList::search(int key)
         std::cout << temp->data;
         return true;
     }
+}
+
+DoubleNode* DoublyLinkedList::getNthNodeFromEnd(int n)
+{
+    // If the list is empty
+    if (n <= 0 || this->tail == nullptr)
+    {
+        return nullptr;
+    }
+
+    // Traverse the list and grab the node 'n' spaces away from end
+    DoubleNode* temp = this->tail;
+    int retrievalCount = 0;
+    while(temp != nullptr && retrievalCount < n)
+    {
+        temp = temp->prev;
+        retrievalCount++;
+    }
+
+    // if n is greater than the number of nodes in the list
+    if (temp == nullptr)
+    {
+        return nullptr;
+    }
+
+        std::cout << temp << std::endl;
+        return temp;
 }
