@@ -25,6 +25,7 @@ add_executable(MAIN
 add_executable(TEST 
     test/test_main.cpp
     test/StudentTest.cpp
+    test/DoublyLinkedListTest.cpp
     src/Student.cpp
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp

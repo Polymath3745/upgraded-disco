@@ -1,6 +1,6 @@
 #ifndef LINKEDLIST_HPP
 #define LINKEDLIST_HPP
-
+#include <iostream>
 // Define the structure of a node
 struct Node
 {

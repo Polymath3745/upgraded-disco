@@ -1,5 +1,4 @@
 #include "DoublyLinkedList.hpp"
-#include <iostream>
 
 DoublyLinkedList::DoublyLinkedList()
 : head(nullptr), tail(nullptr)
@@ -139,6 +138,6 @@ DoubleNode* DoublyLinkedList::getNthNodeFromEnd(int n)
         return nullptr;
     }
 
-        std::cout << temp << std::endl;
+        std::cout << temp->data << std::endl;
         return temp;
 }

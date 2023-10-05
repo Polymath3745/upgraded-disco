@@ -1,6 +1,6 @@
 #ifndef DOUBLYLINKEDLIST_HPP
 #define DOUBLYLINKEDLIST_HPP
-
+#include <iostream>
 struct DoubleNode
 {
     DoubleNode(int value)
