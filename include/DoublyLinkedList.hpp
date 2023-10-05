@@ -34,6 +34,8 @@ class DoublyLinkedList
         // Function to delete a node in the list
         void deleteNode(int key);
 
+        // Function to search for a node in the list
+        bool search(int key);
     private:
         Node* head; // Pointer to the first node in the linked list
         Node* tail; // Pointer to the last node in the linked list

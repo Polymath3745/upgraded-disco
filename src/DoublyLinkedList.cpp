@@ -87,3 +87,31 @@ void DoublyLinkedList::deleteNode(int key)
     // Delete the node
     delete temp; 
 }
+
+bool DoublyLinkedList::search(int key)
+{
+    // If the list is empty
+    if (this->head == nullptr)
+    {
+        return false;
+    }
+
+    // Traverse the list and search for node
+    Node* temp = this->tail;
+    while(temp != nullptr && temp->data != key)
+    {
+        temp = temp->prev;
+    }
+
+    // If node not found
+    if (temp == nullptr)
+    {
+        return false;
+    }
+
+    else
+    {
+        std::cout << temp->data;
+        return true;
+    }
+}
