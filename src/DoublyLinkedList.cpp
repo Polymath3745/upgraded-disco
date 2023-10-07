@@ -141,3 +141,29 @@ DoubleNode* DoublyLinkedList::getNthNodeFromEnd(int n)
         std::cout << temp->data << std::endl;
         return temp;
 }
+
+void DoublyLinkedList::reverse()
+{
+    // If list is empty
+    if (this->head == nullptr)
+    {
+        return;
+    }
+
+    // Traverse linked list and reverse the pointers of each node
+    DoubleNode* prev = nullptr;
+    DoubleNode* current = this->head;
+    DoubleNode* tempNext = nullptr;
+
+
+    while (current != nullptr) {
+        tempNext = current->next;
+        current->next = prev;
+        current->prev = tempNext;
+        prev = current;
+        current = tempNext;
+    }
+
+    this->head = prev; // Update head to point to the last node
+    this->tail = nullptr; // Update tail to point to nullptr
+}

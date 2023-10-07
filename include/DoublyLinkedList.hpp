@@ -39,6 +39,9 @@ class DoublyLinkedList
 
         // Function for finding the 'nth' node from the end
         DoubleNode* getNthNodeFromEnd(int n);
+
+        // Fucntion to reverse the linked list
+        void reverse();
     private:
         DoubleNode* head; // Pointer to the first node in the linked list
         DoubleNode* tail; // Pointer to the last node in the linked list
