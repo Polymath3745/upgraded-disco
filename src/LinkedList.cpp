@@ -1,5 +1,4 @@
 #include "LinkedList.hpp"
-#include <iostream>
 
 // Constructor initializes an empty linked list
 LinkedList::LinkedList()
