@@ -37,6 +37,12 @@
 
 {
   "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/TEST.dir/src/DoublyCircular.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/DoublyCircular.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/DoublyCircular.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
   "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/main.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp",
   "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/main.cpp"
 },
@@ -57,5 +63,11 @@
   "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
   "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/DoublyLinkedList.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp",
   "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/DoublyLinkedList.cpp"
+},
+
+{
+  "directory": "/home/gabriel/Desktop/C++/upgraded-disco/build",
+  "command": "/usr/bin/g++   -I../include -I../src  -g   -o CMakeFiles/MAIN.dir/src/DoublyCircular.cpp.o -c /home/gabriel/Desktop/C++/upgraded-disco/src/DoublyCircular.cpp",
+  "file": "/home/gabriel/Desktop/C++/upgraded-disco/src/DoublyCircular.cpp"
 }
 ]
