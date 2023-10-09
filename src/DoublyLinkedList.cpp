@@ -165,5 +165,5 @@ void DoublyLinkedList::reverse()
     }
 
     this->head = prev; // Update head to point to the last node
-    this->tail = nullptr; // Update tail to point to nullptr
+    insertEnd(prev->data + 1); // Update tail to point to nullptr
 }
