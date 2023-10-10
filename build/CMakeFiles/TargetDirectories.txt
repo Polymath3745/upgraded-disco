@@ -1,5 +1,0 @@
-/home/gabriel/Desktop/C++/upgraded-disco/build/CMakeFiles/rebuild_cache.dir
-/home/gabriel/Desktop/C++/upgraded-disco/build/CMakeFiles/edit_cache.dir
-/home/gabriel/Desktop/C++/upgraded-disco/build/CMakeFiles/test.dir
-/home/gabriel/Desktop/C++/upgraded-disco/build/CMakeFiles/TEST.dir
-/home/gabriel/Desktop/C++/upgraded-disco/build/CMakeFiles/MAIN.dir
