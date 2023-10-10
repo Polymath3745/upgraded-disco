@@ -16,7 +16,7 @@ class DoublyCircular
         // Constructor
         DoublyCircular();
 
-        // Insertion
+        // Inserting
         void insert(int val);
 
     private:
