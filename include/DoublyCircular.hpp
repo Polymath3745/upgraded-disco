@@ -17,10 +17,12 @@ class DoublyCircular
         DoublyCircular();
 
         // Inserting
-        void insert(int val);
+        void insertNode(int val);
+
+        // Deletion
+        void deleteNode(int val);
 
     private:
         CircleNode* head;
-        CircleNode* tail;
 
 };

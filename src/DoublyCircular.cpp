@@ -1,19 +1,19 @@
 #include "DoublyCircular.hpp"
+#include <iostream>
 
 DoublyCircular::DoublyCircular()
-: head(nullptr), tail(nullptr)
+: head(nullptr)
 {
 
 }
 
-void DoublyCircular::insert(int val)
+void DoublyCircular::insertNode(int val)
 {
     CircleNode* newNode = new CircleNode(val);
 
     if(head == nullptr)
     {
         head = newNode;
-        tail = newNode;
     }
 
     else
@@ -29,7 +29,39 @@ void DoublyCircular::insert(int val)
         // Tricky part * sets the node (before the orginal head ) next pointer to the newNode
         head->prev->next = newNode;
         head = newNode;
-        tail = newNode;
     }
 }
 
+void DoublyCircular::deleteNode(int key)
+{
+    if(head == nullptr)
+    {
+        return;
+    }
+
+    if (head->data == key)
+    {
+        CircleNode* tempNode = head;
+        head->prev->next = head->next;
+        head->next->prev = head->prev;
+        head = head->next;
+        delete tempNode;
+    }
+
+    CircleNode* current = head->next;
+    while(current != head && current->data != key)
+    {
+        current = current->next;
+    }
+
+    if (current == head)
+    {
+        std::cout << "Node not found " << std::endl;
+        return;
+    }
+
+    CircleNode* temp = current;
+    current->prev->next = current->next;
+    current->next->prev = current->prev;
+    delete temp;
+}
