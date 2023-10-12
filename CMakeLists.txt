@@ -51,4 +51,5 @@ enable_testing()
 
 add_test(NAME TEST COMMAND TEST)
 
+# this makes the tests discoverable in vscode
 gtest_discover_tests(TEST)
