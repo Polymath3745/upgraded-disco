@@ -25,3 +25,18 @@ void Queue::enqueue(int val)
     }
 }
 
+// dequeue
+int Queue::dequeue()
+{
+    if (front == nullptr)
+    {
+        return 0;
+    }
+
+    QueueNode* tempNode = front;
+    int val = front->data;
+    front = front->next;
+    delete tempNode;
+
+    return val;
+}
