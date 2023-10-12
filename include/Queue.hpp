@@ -30,6 +30,9 @@ class Queue
         // peek the data in the front element
         int peek();
 
+        // get size of queue
+        int getSize();
+
     private:
         QueueNode* front;
         QueueNode* rear;

@@ -31,3 +31,17 @@ TEST(QueueTest, peek)
 
     EXPECT_EQ(actual, expected);
 }
+
+TEST(QueueTest, getSize)
+{
+    Queue* queue = new Queue();
+    for(int i = 1; i <= 3; i++)
+    {
+        queue->enqueue(i);
+    }
+
+    int actual = queue->getSize();
+    int expected = 3;
+    
+    EXPECT_EQ(actual, expected);
+}

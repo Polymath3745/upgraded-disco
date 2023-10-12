@@ -62,3 +62,22 @@ int Queue::peek()
 
     return front->data;
 }
+
+// get the size of the queue
+int Queue::getSize()
+{
+    if (front == nullptr)
+    {
+        return 0;
+    }
+
+    QueueNode* tempNode  = front;
+    int sizeCount = 1;
+    while(tempNode != rear)
+    {
+        sizeCount++;
+        tempNode = tempNode->next;
+    }
+
+    return sizeCount;
+}
