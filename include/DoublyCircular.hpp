@@ -16,11 +16,28 @@ class DoublyCircular
         // Constructor
         DoublyCircular();
 
-        // Insertion
-        void insert(int val);
+        // Inserting
+        void insertAtBeginning(int val);
+
+        // Insert anywhere in list
+        void insert(int pos, int val);
+
+        // Deletion
+        void deleteNode(int val);
+
+        // Length
+        int length();
+
+        // Search
+        CircleNode* search(int key);
+
+        // Reverse
+        void reverse();
+
+        // Display
+        void display();
 
     private:
         CircleNode* head;
-        CircleNode* tail;
 
 };

@@ -20,6 +20,7 @@ add_executable(MAIN
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp
     src/DoublyCircular.cpp
+    src/Stack.cpp
     )
 
 # Add your test files
@@ -27,10 +28,13 @@ add_executable(TEST
     test/test_main.cpp
     test/StudentTest.cpp
     test/DoublyLinkedListTest.cpp
+    test/DoublyCircularTest.cpp
+    test/StackTest.cpp
     src/Student.cpp
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp
     src/DoublyCircular.cpp
+    src/Stack.cpp
     )
 
 # Link your main application with Student class
