@@ -35,6 +35,12 @@ class Stack
         // prints contents of the stack
         void printStack();
 
+        // clear the stack
+        void clear();
+
+        // gets the size of the stack
+        int getSize();
+
     private:
         StackNode* top;
 };

@@ -45,4 +45,7 @@ target_link_libraries(TEST PRIVATE GTest::GTest GTest::Main)
 
 # Register your tests
 enable_testing()
+
 add_test(NAME TEST COMMAND TEST)
+
+gtest_discover_tests(TEST)
