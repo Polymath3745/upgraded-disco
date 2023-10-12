@@ -21,6 +21,7 @@ add_executable(MAIN
     src/DoublyLinkedList.cpp
     src/DoublyCircular.cpp
     src/Stack.cpp
+    src/Queue.cpp
     )
 
 # Add your test files
@@ -30,11 +31,13 @@ add_executable(TEST
     test/DoublyLinkedListTest.cpp
     test/DoublyCircularTest.cpp
     test/StackTest.cpp
+    test/QueueTest.cpp
     src/Student.cpp
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp
     src/DoublyCircular.cpp
     src/Stack.cpp
+    src/Queue.cpp
     )
 
 # Link your main application with Student class
@@ -45,4 +48,8 @@ target_link_libraries(TEST PRIVATE GTest::GTest GTest::Main)
 
 # Register your tests
 enable_testing()
+
 add_test(NAME TEST COMMAND TEST)
+
+# this makes the tests discoverable in vscode
+gtest_discover_tests(TEST)
