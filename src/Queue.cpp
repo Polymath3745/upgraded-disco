@@ -40,3 +40,14 @@ int Queue::dequeue()
 
     return val;
 }
+
+// isEmpty
+bool Queue::isEmpty()
+{
+    if(front == nullptr)
+    {
+        return true;
+    }
+
+    return false;
+}

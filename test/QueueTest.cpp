@@ -13,3 +13,11 @@ TEST(QueueTest, enqueue_dequeue)
     int expected = 1;
     EXPECT_EQ(actual, expected);
 }
+
+TEST(QueueTest, isEmpty)
+{
+    Queue* queue = new Queue();
+    EXPECT_TRUE(queue->isEmpty());
+    queue->enqueue(1);
+    EXPECT_FALSE(queue->isEmpty());
+}
