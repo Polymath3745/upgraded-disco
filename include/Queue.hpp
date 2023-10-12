@@ -27,6 +27,9 @@ class Queue
         // Check if the queue is empty
         bool isEmpty();
 
+        // peek the data in the front element
+        int peek();
+
     private:
         QueueNode* front;
         QueueNode* rear;

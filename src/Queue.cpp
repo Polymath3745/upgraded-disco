@@ -51,3 +51,14 @@ bool Queue::isEmpty()
 
     return false;
 }
+
+// peek
+int Queue::peek()
+{
+    if (front == nullptr)
+    {
+        return 0;
+    }
+
+    return front->data;
+}
