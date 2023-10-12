@@ -20,10 +20,19 @@ class Stack
         Stack();
         ~Stack();
 
+        // pushes node to stack
         void push(int value);
+
+        // pops node off of stack
         void pop();
+
+        // returns the top data in stack
         int peek();
+
+        // checks if the stck is empty
         bool isEmpty();
+
+        // prints contents of the stack
         void printStack();
 
     private:

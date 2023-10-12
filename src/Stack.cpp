@@ -59,3 +59,12 @@ int Stack::peek()
         return top->data;
     }
 }
+
+bool Stack::isEmpty()
+{
+    if (top == nullptr)
+    {
+        return true;
+    }
+    else return false;
+}
