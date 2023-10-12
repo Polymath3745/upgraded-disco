@@ -33,6 +33,9 @@ class Queue
         // get size of queue
         int getSize();
 
+        // clear
+        void clear();
+        
     private:
         QueueNode* front;
         QueueNode* rear;
