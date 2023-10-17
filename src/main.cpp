@@ -22,6 +22,10 @@ int main()
     int num = 5;
     int result = factorial(num);
     std::cout << result << std::endl;
+
+    int n = 10;
+    result = fibonacci(n);
+    std::cout << result << std::endl;
     
     return 0;
 }
