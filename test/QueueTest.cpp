@@ -42,6 +42,18 @@ TEST(QueueTest, getSize)
 
     int actual = queue->getSize();
     int expected = 3;
-    
+
     EXPECT_EQ(actual, expected);
+}
+
+TEST(QueueTest, clear)
+{
+    Queue* queue = new Queue();
+    for(int i = 1; i <= 3; i++)
+    {
+        queue->enqueue(i);
+    }
+
+    queue->clear();
+    EXPECT_TRUE(queue->isEmpty());
 }

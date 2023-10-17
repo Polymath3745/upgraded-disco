@@ -81,3 +81,21 @@ int Queue::getSize()
 
     return sizeCount;
 }
+
+// clear the queue
+void Queue::clear()
+{
+    if (front == nullptr)
+    {
+        std::cout << "queue is empty" << std::endl;
+        return;
+    }
+
+    
+    while(front != nullptr)
+    {
+        QueueNode* temp = front;
+        front = front->next;
+        delete temp;
+    }
+}
