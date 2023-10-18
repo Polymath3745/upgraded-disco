@@ -22,6 +22,7 @@ add_executable(MAIN
     src/DoublyCircular.cpp
     src/Stack.cpp
     src/Queue.cpp
+    src/RecursionExamples.cpp
     )
 
 # Add your test files
@@ -32,12 +33,14 @@ add_executable(TEST
     test/DoublyCircularTest.cpp
     test/StackTest.cpp
     test/QueueTest.cpp
+    test/RecursionExamplesTest.cpp
     src/Student.cpp
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp
     src/DoublyCircular.cpp
     src/Stack.cpp
     src/Queue.cpp
+    src/RecursionExamples.cpp
     )
 
 # Link your main application with Student class
