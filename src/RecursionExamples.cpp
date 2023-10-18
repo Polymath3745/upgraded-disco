@@ -16,3 +16,11 @@ int fibonacci(int n) {
         return fibonacci(n - 1) + fibonacci(n - 2); // recursive step
     }
 }
+
+int fibonacciEsque(int n) {
+    if (n <= 1) {
+        return n; // base case: F(0) = 0, F(1) = 1
+    } else {
+        return n + fibonacciEsque(n - 1) + fibonacciEsque(n - 2); // recursive step
+    }
+} 

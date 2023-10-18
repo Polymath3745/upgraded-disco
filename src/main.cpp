@@ -23,9 +23,8 @@ int main()
     int result = factorial(num);
     std::cout << result << std::endl;
 
-    int n = 10;
-    result = fibonacci(n);
-    std::cout << result << std::endl;
+    int n = 5;
+    std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
     
     return 0;
 }
