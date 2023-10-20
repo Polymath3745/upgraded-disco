@@ -27,6 +27,15 @@ class BinaryTree
         // traverses tree
         void inorderTraversal();
 
+        // search
+        TreeNode* search(int val);
+
+        // delete
+        TreeNode* deleteNode(int val);
+
+        // find min
+        TreeNode* findMin(TreeNode* node);
+
     private:
         TreeNode* root;
 
@@ -35,5 +44,9 @@ class BinaryTree
 
         // traverses Recursively
         void inorderTraversal(TreeNode* node);
+
+        // search Recursively
+        TreeNode* searchRecursive(TreeNode* node, int val);
+
 };
 #endif

@@ -13,14 +13,13 @@ int main()
     // Insert elements into the tree
     tree.insert(1);
     tree.insert(3);
-    tree.insert(2);
+    tree.insert(4);
     tree.insert(8);
     tree.insert(6);
+    tree.insert(2);
     
-    // Perform in-order traversal and print the nodes
-    std::cout << "In-order traversal: ";
-    tree.inorderTraversal();
-    std::cout << std::endl;
+    // Perform search and retrieve node if found;
+    TreeNode* result = tree.search(2);
 
     return 0;
 }
