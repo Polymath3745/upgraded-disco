@@ -19,7 +19,7 @@ int main()
     tree.insert(2);
     
     // Perform search and retrieve node if found;
-    TreeNode* result = tree.search(2);
+    //TreeNode* result = tree.search(2);
 
     return 0;
 }

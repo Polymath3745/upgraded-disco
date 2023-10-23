@@ -33,20 +33,20 @@ class BinaryTree
         // delete
         TreeNode* deleteNode(int val);
 
-        // find min
-        TreeNode* findMin(TreeNode* node);
-
     private:
         TreeNode* root;
 
         // inserts Recursively
-        TreeNode* insertRecursive(TreeNode* node, int val);
+        void insert(TreeNode* node, int val);
 
         // traverses Recursively
         void inorderTraversal(TreeNode* node);
 
         // search Recursively
         TreeNode* searchRecursive(TreeNode* node, int val);
+
+        // delete in-order successor 
+        TreeNode* deleteSuccessor(TreeNode* node, int val);
 
 };
 #endif
