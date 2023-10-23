@@ -36,17 +36,17 @@ class BinaryTree
     private:
         TreeNode* root;
 
-        // inserts Recursively
+        // inserts iteratively
         void insert(TreeNode* node, int val);
 
         // traverses Recursively
-        void inorderTraversal(TreeNode* node);
+        TreeNode* inorderSuccessor(TreeNode* node);
 
-        // search Recursively
-        TreeNode* searchRecursive(TreeNode* node, int val);
+        // search iteratively
+        TreeNode* search(TreeNode* node, int val);
 
         // delete in-order successor 
-        TreeNode* deleteSuccessor(TreeNode* node, int val);
+        TreeNode* deleteNode(TreeNode* node, int val);
 
 };
 #endif

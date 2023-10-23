@@ -59,7 +59,43 @@ void BinaryTree::insert(TreeNode* node, int val)
 
 }
 
+TreeNode* BinaryTree::search(int val)
+{
+    TreeNode* result;
+    result = search(root, val);
+    return result;
+}
 
+TreeNode* BinaryTree::search(TreeNode* node, int val)
+{
+    TreeNode* current = node;
 
+    if (current == nullptr)
+    {
+        std::cout << "Tree is currently empty" << std::endl;
+        return nullptr;
+    }
 
+    while(current != nullptr)
+    {
+        if (val < current->data)
+        {
+            current = current->left;
+        }
+
+        else if (val > current->data)
+        {
+            current = current->right;
+        }
+    }
+
+    if (current == nullptr)
+    {
+        std::cout << "Node not found in Tree" << std::endl;
+        return nullptr;
+    }
+
+    std::cout << "Node found!" << std::endl;
+    return current;
+}
 
