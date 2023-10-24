@@ -37,7 +37,7 @@ class BinaryTree
         TreeNode* root;
 
         // inserts iteratively
-        void insert(TreeNode* node, int val);
+        TreeNode* insertRecursive(TreeNode* node, int val);
 
         // traverses Recursively
         TreeNode* inorderSuccessor(TreeNode* node);

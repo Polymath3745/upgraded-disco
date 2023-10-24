@@ -8,54 +8,28 @@ BinaryTree::BinaryTree()
 
 void BinaryTree::insert(int val)
 {
-    insert(root, val);
+    root  = insertRecursive(root, val);
 }
 
 
-void BinaryTree::insert(TreeNode* node, int val)
+TreeNode* BinaryTree::insertRecursive(TreeNode* node, int val)
 {
-    // New node to insert
-    TreeNode* newNode = new TreeNode(val);
-    // Copy of root node
-    TreeNode* current = node;
-    // keep track of parentiously visited node
-    TreeNode* parent = current;
-
     if (node == nullptr)
     {
-        node = newNode; // If the tree is empty, the new node becomes the root
-        return;
+        return new TreeNode(val);
     }
 
-    while(current != nullptr)
+    if (val < node->data)
     {
-        parent = current;
-        if(val < current->data)
-        {
-            current = current->left;
-        }
-
-        else if (val > current->data)
-        {
-            current = current->right;
-            
-        }
-        else if (val == current->data)
-        {
-            // Duplicate node entered
-            delete newNode;
-            return;
-        }
+        node->left = insertRecursive(node->left, val);
     }
 
-    if(val < parent->data)
+    else if (val > node->data)
     {
-        parent->left = newNode;
+        node->right = insertRecursive(node->right, val);
     }
-    else
-    {
-        parent->right = newNode;
-    }
+
+    return node;
 
 }
 
