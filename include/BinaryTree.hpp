@@ -28,7 +28,7 @@ class BinaryTree
         void inorderTraversal();
 
         // search
-        TreeNode* search(int val);
+        void search(int val);
 
         // delete
         TreeNode* deleteNode(int val);
@@ -43,7 +43,7 @@ class BinaryTree
         TreeNode* inorderSuccessor(TreeNode* node);
 
         // search iteratively
-        TreeNode* search(TreeNode* node, int val);
+        TreeNode* searchRecursive(TreeNode* node, int val);
 
         // delete in-order successor 
         TreeNode* deleteNode(TreeNode* node, int val);

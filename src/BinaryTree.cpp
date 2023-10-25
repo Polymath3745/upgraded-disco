@@ -33,43 +33,41 @@ TreeNode* BinaryTree::insertRecursive(TreeNode* node, int val)
 
 }
 
-TreeNode* BinaryTree::search(int val)
+void BinaryTree::search(int val)
 {
     TreeNode* result;
-    result = search(root, val);
-    return result;
+    result = searchRecursive(root, val);
+
+    if (result == nullptr)
+    {
+        std::cout << "Node not found in tree" << std::endl;
+    }
+
+    else
+    {
+        std::cout << "Node found in tree : " << result->data << std::endl;
+    }
 }
 
-TreeNode* BinaryTree::search(TreeNode* node, int val)
+TreeNode* BinaryTree::searchRecursive(TreeNode* node, int val)
 {
-    TreeNode* current = node;
-
-    if (current == nullptr)
+    // Node not found
+    if (node == nullptr)
     {
-        std::cout << "Tree is currently empty" << std::endl;
-        return nullptr;
+        return node;
     }
 
-    while(current != nullptr)
+    else if (val < node->data)
     {
-        if (val < current->data)
-        {
-            current = current->left;
-        }
-
-        else if (val > current->data)
-        {
-            current = current->right;
-        }
+        return searchRecursive(node->left, val);
     }
 
-    if (current == nullptr)
+    else if (val > node->data)
     {
-        std::cout << "Node not found in Tree" << std::endl;
-        return nullptr;
+        return searchRecursive(node->right, val);
     }
 
-    std::cout << "Node found!" << std::endl;
-    return current;
+    // Node found!
+    return node;
 }
 
