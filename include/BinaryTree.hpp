@@ -31,7 +31,7 @@ class BinaryTree
         void search(int val);
 
         // delete
-        TreeNode* deleteNode(int val);
+        void deleteNode(int val);
 
     private:
         TreeNode* root;
@@ -45,8 +45,11 @@ class BinaryTree
         // search iteratively
         TreeNode* searchRecursive(TreeNode* node, int val);
 
-        // delete in-order successor 
-        TreeNode* deleteNode(TreeNode* node, int val);
+        // delete 
+        TreeNode* deleteNodeRecursive(TreeNode* node, int val);
+
+        // find min
+        TreeNode* findMin(TreeNode* node);
 
 };
 #endif
