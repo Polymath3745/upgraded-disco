@@ -33,6 +33,9 @@ class BinaryTree
         // delete
         void deleteNode(int val);
 
+        // In order Traversal
+        void inOrderTraversal();
+
     private:
         TreeNode* root;
 
