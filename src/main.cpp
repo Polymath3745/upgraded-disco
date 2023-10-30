@@ -2,29 +2,31 @@
 #include "DoublyLinkedList.hpp"
 #include "DoublyCircular.hpp"
 #include "RecursionExamples.hpp"
+#include "BinaryTree.hpp"
 #include <iostream>
 
 int main()
 {
-    // Create the doubly linked list object
-    //DoublyCircular circleList;
+    // Create a BinarySearchTree instance
+    BinaryTree tree;
 
-    //circleList.insertAtBeginning(4);
-    //circleList.insertAtBeginning(3);
-    //circleList.insertAtBeginning(2);
-    //circleList.insertAtBeginning(1);
-
-    //circleList.display();
-
-    //circleList.reverse();
-
-    //circleList.display();
-    int num = 5;
-    int result = factorial(num);
-    std::cout << result << std::endl;
-
-    int n = 5;
-    std::cout << "Fibonacci(" << n << ") = " << fibonacci(n) << std::endl;
+    // Insert elements into the tree
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(3);
+    tree.insert(8);
+    tree.insert(7);
+    tree.insert(15);
+    tree.insert(12);
+    tree.insert(11);
+    tree.insert(18);
     
+    
+
+    tree.inOrderTraversal();
+    
+    // Perform search and retrieve node if found;
+    //TreeNode* result = tree.search(2);
+
     return 0;
 }
