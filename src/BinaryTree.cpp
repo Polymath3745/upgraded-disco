@@ -155,3 +155,65 @@ TreeNode* BinaryTree::deleteNodeRecursive(TreeNode* node, int val)
     return node;
 }
 
+void BinaryTree::inOrderTraversal()
+{
+    inOrderTraversalRecursive(root);
+}
+
+void BinaryTree::inOrderTraversalRecursive(TreeNode* node)
+ {
+    if (node == nullptr)
+    {
+        return;
+    }
+
+    // Traverse left subtree
+    inOrderTraversalRecursive(node->left);
+
+    std::cout << node->data <<  " " << std::endl;
+
+    // Traverse right subtree
+    inOrderTraversalRecursive(node->right);
+}
+
+void BinaryTree::preOrderTraversal()
+{
+    preOrderTraversalRecursive(root);
+}
+
+void BinaryTree::preOrderTraversalRecursive(TreeNode* node)
+{
+    if (node == nullptr)
+    {
+        return;
+    }
+
+    std::cout << node->data <<  " " << std::endl;
+
+    // Traverse left subtree
+    preOrderTraversalRecursive(node->left);
+
+    // Traverse right subtree
+    preOrderTraversalRecursive(node->right);
+}
+
+void BinaryTree::postOrderTraversal()
+{
+    postOrderTraversalRecursive(root);
+}
+
+void BinaryTree::postOrderTraversalRecursive(TreeNode* node)
+{
+    if (node == nullptr)
+    {
+        return;
+    }
+
+    // Traverse left subtree
+    postOrderTraversalRecursive(node->left);
+
+    // Traverse right subtree
+    postOrderTraversalRecursive(node->right);
+
+    std::cout << node->data <<  " " << std::endl;
+}

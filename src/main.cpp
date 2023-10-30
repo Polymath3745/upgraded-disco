@@ -23,7 +23,7 @@ int main()
     
     
 
-    tree.deleteNode(15);
+    tree.inOrderTraversal();
     
     // Perform search and retrieve node if found;
     //TreeNode* result = tree.search(2);

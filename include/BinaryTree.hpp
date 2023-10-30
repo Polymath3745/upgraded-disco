@@ -24,9 +24,6 @@ class BinaryTree
         // inserts node in tree
         void insert(int val);
 
-        // traverses tree
-        void inorderTraversal();
-
         // search
         void search(int val);
 
@@ -35,6 +32,12 @@ class BinaryTree
 
         // In order Traversal
         void inOrderTraversal();
+
+        // Pre order Traversal
+        void preOrderTraversal();
+
+        // Post order Traversal
+        void postOrderTraversal();
 
     private:
         TreeNode* root;
@@ -54,5 +57,13 @@ class BinaryTree
         // find min
         TreeNode* findMin(TreeNode* node);
 
+        // traverse recursively
+        void inOrderTraversalRecursive(TreeNode* node);
+
+        // traverse recursively
+        void preOrderTraversalRecursive(TreeNode* node);
+
+        // traverse recursively
+        void postOrderTraversalRecursive(TreeNode* node);
 };
 #endif
