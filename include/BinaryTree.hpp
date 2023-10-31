@@ -57,22 +57,48 @@ class BinaryTree
         // delete 
         TreeNode* deleteNodeRecursive(TreeNode* node, int val);
 
-        // find min
+        /**
+         * @brief find the minimum valued node
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
         TreeNode* findMin(TreeNode* node);
 
-        // find max
+        /**
+         * @brief find the maximum valued node in tree
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
         TreeNode* findMax(TreeNode* node);
 
-        // traverse recursively
+        /**
+         * @brief in order traversal recursive
+         * 
+         */
         void inOrderTraversalRecursive(TreeNode* node);
 
-        // traverse recursively
+        /**
+         * @brief pre order traversal recursive
+         * 
+         */
         void preOrderTraversalRecursive(TreeNode* node);
 
-        // traverse recursively
+        /**
+         * @brief post order traversal recursive
+         * 
+         * @param TreeNode* node 
+         */
         void postOrderTraversalRecursive(TreeNode* node);
 
-        // level order traversal
+        /**
+         * @brief 
+         * Starts by enqueue of the root node
+         * traverses level order
+         * 
+         * @param TreeNode* node 
+         */
         void levelOrderTraversal(TreeNode* node);
 };
 #endif

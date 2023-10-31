@@ -101,7 +101,7 @@ TreeNode* BinaryTree::findMax(TreeNode* node)
         return nullptr;
     }
 
-    // Recursive step: if there is a left child, recursively find the minimum in the left subtree
+    // Recursive step: if there is a right child, recursively find the minimum in the right subtree
     if (node->right != nullptr)
     {
         return findMax(node->right);
@@ -244,12 +244,6 @@ void BinaryTree::levelOrderTraversal()
     levelOrderTraversal(root);
 }
 
-/**
- * @brief 
- * Starts by enqueue of the root node
- * traverses level order
- * @param TreeNode* node 
- */
 void BinaryTree::levelOrderTraversal(TreeNode* node)
 {
     Queue queue;
