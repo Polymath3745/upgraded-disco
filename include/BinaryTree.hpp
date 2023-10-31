@@ -60,6 +60,9 @@ class BinaryTree
         // find min
         TreeNode* findMin(TreeNode* node);
 
+        // find max
+        TreeNode* findMax(TreeNode* node);
+
         // traverse recursively
         void inOrderTraversalRecursive(TreeNode* node);
 
@@ -70,6 +73,6 @@ class BinaryTree
         void postOrderTraversalRecursive(TreeNode* node);
 
         // level order traversal
-        void levelOrderTraversalRecursive(TreeNode* node);
+        void levelOrderTraversal(TreeNode* node);
 };
 #endif

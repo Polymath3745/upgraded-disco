@@ -23,7 +23,7 @@ int main()
     
     
 
-    tree.inOrderTraversal();
+    tree.levelOrderTraversal();
     
     // Perform search and retrieve node if found;
     //TreeNode* result = tree.search(2);
