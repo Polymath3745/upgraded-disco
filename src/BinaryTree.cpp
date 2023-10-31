@@ -1,5 +1,7 @@
 #include "BinaryTree.hpp"
 
+#include "Queue.hpp"
+
 BinaryTree::BinaryTree()
 : root(nullptr)
 {
@@ -216,4 +218,19 @@ void BinaryTree::postOrderTraversalRecursive(TreeNode* node)
     postOrderTraversalRecursive(node->right);
 
     std::cout << node->data <<  " " << std::endl;
+}
+
+void BinaryTree::levelOrderTraversal()
+{
+    levelOrderTraversalRecursive(root);
+}
+
+void BinaryTree::levelOrderTraversalRecursive(TreeNode* node)
+{
+    Queue queue;
+    queue.enqueue(node);
+    while (!queue.isEmpty())
+    {
+        
+    }
 }
