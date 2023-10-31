@@ -39,6 +39,9 @@ class BinaryTree
         // Post order Traversal
         void postOrderTraversal();
 
+        // Level order Traversal
+        void levelOrderTraversal();
+
     private:
         TreeNode* root;
 
@@ -65,5 +68,8 @@ class BinaryTree
 
         // traverse recursively
         void postOrderTraversalRecursive(TreeNode* node);
+
+        // level order traversal
+        void levelOrderTraversalRecursive(TreeNode* node);
 };
 #endif
