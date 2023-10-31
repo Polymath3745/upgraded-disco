@@ -25,6 +25,23 @@ void Queue::enqueue(int val)
     }
 }
 
+// BinaryTree enqueue
+void Queue::enqueue(TreeNode* node)
+{
+    QueueNode* newNode = new QueueNode(node);
+    if(front == nullptr)
+    {
+        front = newNode;
+        rear = newNode;
+    }
+
+    else
+    {
+        rear->next = newNode;
+        rear = newNode;
+    }
+}
+
 // dequeue
 int Queue::dequeue()
 {
@@ -40,6 +57,23 @@ int Queue::dequeue()
 
     return val;
 }
+
+// BinaryTree dequeue
+TreeNode* Queue::BSTdequeue()
+{
+    if (front == nullptr)
+    {
+        return 0;
+    }
+
+    QueueNode* tempNode = front;
+    TreeNode* node = front->m_node;
+    front = front->next;
+    delete tempNode;
+
+    return node;
+}
+
 
 // isEmpty
 bool Queue::isEmpty()

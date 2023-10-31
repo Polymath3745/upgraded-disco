@@ -1,5 +1,7 @@
 #include "BinaryTree.hpp"
 
+#include "Queue.hpp"
+
 BinaryTree::BinaryTree()
 : root(nullptr)
 {
@@ -84,6 +86,25 @@ TreeNode* BinaryTree::findMin(TreeNode* node)
     if (node->left != nullptr)
     {
         return findMin(node->left);
+    }
+
+    // If there is no left child, this node is the minimum node
+    return node;
+}
+
+TreeNode* BinaryTree::findMax(TreeNode* node)
+{
+
+    // Base case: if the current node is null, return null
+    if (node == nullptr)
+    {
+        return nullptr;
+    }
+
+    // Recursive step: if there is a right child, recursively find the minimum in the right subtree
+    if (node->right != nullptr)
+    {
+        return findMax(node->right);
     }
 
     // If there is no left child, this node is the minimum node
@@ -216,4 +237,32 @@ void BinaryTree::postOrderTraversalRecursive(TreeNode* node)
     postOrderTraversalRecursive(node->right);
 
     std::cout << node->data <<  " " << std::endl;
+}
+
+void BinaryTree::levelOrderTraversal()
+{
+    levelOrderTraversal(root);
+}
+
+void BinaryTree::levelOrderTraversal(TreeNode* node)
+{
+    Queue queue;
+    queue.enqueue(node);
+    while (!queue.isEmpty())
+    {
+        
+
+        TreeNode* temp = queue.BSTdequeue();
+        std::cout << temp->data << std::endl;
+        if (temp->left != nullptr)
+        {
+            queue.enqueue(temp->left);
+        }
+
+        if (temp->right != nullptr)
+        {
+            queue.enqueue(temp->right);
+        }
+
+    }
 }
