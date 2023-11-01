@@ -1,6 +1,7 @@
 #include "BinaryTree.hpp"
 
 #include "Queue.hpp"
+#include "helper.hpp"
 
 BinaryTree::BinaryTree()
 : root(nullptr)
@@ -264,5 +265,31 @@ void BinaryTree::levelOrderTraversal(TreeNode* node)
             queue.enqueue(temp->right);
         }
 
+    }
+}
+
+int BinaryTree::getHeight()
+{
+    int height{0};
+    height = getHeight(root);
+
+    return height;
+}
+
+int BinaryTree::getHeight(TreeNode* node)
+{
+    int leftSubtreeHeight{0};
+    int rightSubtreeHeight{0};
+
+    if (node == nullptr)
+    {
+        return -1;
+    }
+
+    else
+    {
+        leftSubtreeHeight = getHeight(node->left);
+        rightSubtreeHeight = getHeight(node->right);
+        return Max(leftSubtreeHeight, rightSubtreeHeight) + 1;
     }
 }

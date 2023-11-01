@@ -23,7 +23,8 @@ int main()
     
     
 
-    tree.levelOrderTraversal();
+    std::cout << tree.getHeight() << std::endl;
+
     
     // Perform search and retrieve node if found;
     //TreeNode* result = tree.search(2);
