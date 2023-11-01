@@ -107,5 +107,13 @@ class BinaryTree
          * @param TreeNode* node 
          */
         void levelOrderTraversal(TreeNode* node);
+        
+        /**
+         * @brief Get the Height of the BST
+         * 
+         * @param TreeNode*  node 
+         * @return int 
+         */
+        int getHeight(TreeNode* node);
 };
 #endif
