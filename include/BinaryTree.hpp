@@ -42,6 +42,13 @@ class BinaryTree
         // Level order Traversal
         void levelOrderTraversal();
 
+        /**
+         * @brief Get the Height of the BST
+         * 
+         * @return int 
+         */
+        int getHeight();
+
     private:
         TreeNode* root;
 
