@@ -48,6 +48,15 @@ class BinaryTree
          * @return int 
          */
         int getHeight();
+        
+        /**
+         * @brief finds if the BST is balanced or not
+         * 
+         * @return true 
+         * @return false 
+         */
+        bool isBalanced();
+
 
     private:
         TreeNode* root;
@@ -115,5 +124,15 @@ class BinaryTree
          * @return int 
          */
         int getHeight(TreeNode* node);
+
+        /**
+         * @brief private helper for checking if tree is balanced
+         * 
+         * @param node 
+         * @param height 
+         * @return true 
+         * @return false 
+         */
+        bool isBalanced(TreeNode* node, int& height);
 };
 #endif

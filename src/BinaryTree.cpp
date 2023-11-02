@@ -293,3 +293,33 @@ int BinaryTree::getHeight(TreeNode* node)
         return Max(leftSubtreeHeight, rightSubtreeHeight) + 1;
     }
 }
+
+bool BinaryTree::isBalanced()
+{
+    int height{0};
+    return isBalanced(root, height);
+}
+
+bool BinaryTree::isBalanced(TreeNode* node, int& height)
+{
+    if (node == nullptr)
+    {
+        height = 0;
+        return true;
+    }
+
+    int leftHeight, rightHeight;
+    bool leftIsBalanced = isBalanced(node->left, leftHeight);
+    bool rightIsBalanced = isBalanced(node->right, rightHeight);
+
+    // Check if left and right subtrees are balanced and their heights differ by at most 1
+    if(leftIsBalanced && rightIsBalanced && abs(leftHeight - rightHeight) <= 1)
+    {
+        height = Max(leftHeight, rightHeight) + 1;
+        return true;
+    }
+
+    // The tree is unbalanced
+    height = 0;
+    return false;
+}
