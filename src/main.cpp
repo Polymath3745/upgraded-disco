@@ -23,7 +23,8 @@ int main()
     
     
 
-    std::cout << tree.getHeight() << std::endl;
+    bool result = tree.isBalanced();
+    std::cout << result << std::endl;
 
     
     // Perform search and retrieve node if found;
