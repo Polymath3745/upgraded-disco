@@ -57,6 +57,14 @@ class BinaryTree
          */
         bool isBalanced();
 
+        /**
+         * @brief finds if the tree is a BST or not
+         * 
+         * @return true 
+         * @return false 
+         */
+        bool isBST();
+
 
     private:
         TreeNode* root;
@@ -134,5 +142,13 @@ class BinaryTree
          * @return false 
          */
         bool isBalanced(TreeNode* node, int& height);
+
+        /**
+         * @brief checks if tree is a BST
+         * 
+         * @param minValue 
+         * @param maxValue 
+         */
+        bool isBST(TreeNode* node, int minValue, int maxValue);
 };
 #endif
