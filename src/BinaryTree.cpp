@@ -2,6 +2,7 @@
 
 #include "Queue.hpp"
 #include "helper.hpp"
+#include <climits>
 
 BinaryTree::BinaryTree()
 : root(nullptr)
@@ -322,4 +323,26 @@ bool BinaryTree::isBalanced(TreeNode* node, int& height)
     // The tree is unbalanced
     height = 0;
     return false;
+}
+
+bool BinaryTree::isBST()
+{
+    return isBST(root, INT_MIN, INT_MAX);
+}
+
+bool BinaryTree::isBST(TreeNode* node, int min, int max)
+{
+    if (node == nullptr)
+    {
+        return true;
+    }
+
+    if (node->data < min || node->data > max)
+    {
+        return false;
+    }
+
+    // Check left subtree with updated maximum value
+    // and right subtree with updated minimum value
+    return isBST(node->left, min, node->data - 1) && isBST(node->right, node->data + 1, max);
 }
