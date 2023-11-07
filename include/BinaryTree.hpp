@@ -150,5 +150,15 @@ class BinaryTree
          * @param maxValue 
          */
         bool isBST(TreeNode* node, int minValue, int maxValue);
+
+        /**
+         * @brief finds the lowest common ancestor of two nodes
+         * 
+         * @param node 
+         * @param node1 
+         * @param node2 
+         * @return int 
+         */
+        int findLCA(TreeNode* node, int node1, int node2);
 };
 #endif
