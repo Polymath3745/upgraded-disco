@@ -72,10 +72,19 @@ class BinaryTree
          */
         int findLCA();
 
+        /**
+         * @brief returns the successor of the given node
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
+        TreeNode* findSuccessor(TreeNode* node);
+
+        TreeNode* root;
 
 
     private:
-        TreeNode* root;
+        
 
         // inserts iteratively
         TreeNode* insertRecursive(TreeNode* node, int val);

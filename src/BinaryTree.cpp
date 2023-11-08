@@ -375,3 +375,35 @@ int BinaryTree::findLCA(TreeNode* node, int node1, int node2)
         return node->data;
     }
 }
+
+TreeNode* BinaryTree::findSuccessor(TreeNode* node)
+{
+    if(node->right != nullptr)
+    {
+        // Since the node has a right child, find the leftmost node in the right subtree
+        return findMin(node->right);
+    }
+    else
+    {
+        // If the node does not have a right child, find the lowest ancestor with left child
+        TreeNode* successor = nullptr;
+        TreeNode* ancestor = root; // Start from the root of the tree
+
+        while (ancestor != node)
+        {
+            if (node->data < ancestor->data)
+            {
+                // If node's value is smaller, update the successor and move left
+                successor = ancestor;
+                ancestor = ancestor->left;
+            }
+
+            else
+            {
+                ancestor = ancestor->right;
+            }
+        }
+
+        return successor;
+    }
+}

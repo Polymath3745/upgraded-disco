@@ -31,8 +31,7 @@ int main()
     tree.insert(1); */
     
 
-    bool result = tree.isBST();
-    std::cout << result << std::endl;
+    TreeNode* successor = tree.findSuccessor(tree.root->right->left->left);
 
     
     // Perform search and retrieve node if found;
