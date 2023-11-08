@@ -65,6 +65,14 @@ class BinaryTree
          */
         bool isBST();
 
+        /**
+         * @brief returns the LCA
+         * 
+         * @return int 
+         */
+        int findLCA();
+
+
 
     private:
         TreeNode* root;

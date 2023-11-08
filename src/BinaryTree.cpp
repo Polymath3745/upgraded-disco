@@ -346,3 +346,32 @@ bool BinaryTree::isBST(TreeNode* node, int min, int max)
     // and right subtree with updated minimum value
     return isBST(node->left, min, node->data - 1) && isBST(node->right, node->data + 1, max);
 }
+
+int BinaryTree::findLCA()
+{
+    return findLCA(root, 3, 8);
+}
+
+int BinaryTree::findLCA(TreeNode* node, int node1, int node2)
+{
+    if (node == nullptr)
+    {   
+        // LCA not found
+        return -1;
+    }
+
+    if (node->data > node1 && node->data > node2)
+    {
+        return findLCA(node->left, node1, node2);
+    }
+
+    else if (node->data < node1 && node->data < node2)
+    {
+        return findLCA(node->right, node1, node2);
+    }
+
+    else
+    {
+        return node->data;
+    }
+}
