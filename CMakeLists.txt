@@ -24,6 +24,7 @@ add_executable(MAIN
     src/Queue.cpp
     src/RecursionExamples.cpp
     src/BinaryTree.cpp
+    src/Graph.cpp
     )
 
 # Add your test files
@@ -36,6 +37,7 @@ add_executable(TEST
     test/QueueTest.cpp
     test/RecursionExamplesTest.cpp
     test/BinaryTreeTest.cpp
+    test/GraphTest.cpp
     src/Student.cpp
     src/LinkedList.cpp
     src/DoublyLinkedList.cpp
@@ -44,6 +46,7 @@ add_executable(TEST
     src/Queue.cpp
     src/RecursionExamples.cpp
     src/BinaryTree.cpp
+    src/Graph.cpp
     )
 
 # Link your main application with Student class
