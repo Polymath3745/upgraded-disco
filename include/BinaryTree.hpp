@@ -25,7 +25,7 @@ class BinaryTree
         void insert(int val);
 
         // search
-        void search(int val);
+        TreeNode* search(int val);
 
         // delete
         void deleteNode(int val);
@@ -80,9 +80,15 @@ class BinaryTree
          */
         TreeNode* findSuccessor(TreeNode* node);
 
+        /**
+         * @brief returns the predecessor of the given node
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
+        TreeNode* findPredecessor(TreeNode* node);
+
         TreeNode* root;
-
-
     private:
         
 

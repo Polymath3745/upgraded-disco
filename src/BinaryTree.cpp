@@ -37,7 +37,7 @@ TreeNode* BinaryTree::insertRecursive(TreeNode* node, int val)
 
 }
 
-void BinaryTree::search(int val)
+TreeNode* BinaryTree::search(int val)
 {
     TreeNode* result;
     result = searchRecursive(root, val);
@@ -51,6 +51,8 @@ void BinaryTree::search(int val)
     {
         std::cout << "Node found in tree : " << result->data << std::endl;
     }
+
+    return result;
 }
 
 TreeNode* BinaryTree::searchRecursive(TreeNode* node, int val)
@@ -400,10 +402,45 @@ TreeNode* BinaryTree::findSuccessor(TreeNode* node)
 
             else
             {
+                // If node's value is greater, move right
                 ancestor = ancestor->right;
             }
         }
 
         return successor;
+    }
+}
+
+TreeNode* BinaryTree::findPredecessor(TreeNode* node)
+{
+    if(node->left != nullptr)
+    {
+        // If the node has a left child, the predecessor is the right most node in the left subtree
+        return findMax(node->left);
+    }
+
+    else
+    {
+        // If the node does not have a left child, find the closest ancestor where the node is in the right subtree
+        TreeNode* predecessor = nullptr;
+        TreeNode* ancestor = root; // Start from the root of the tree
+
+        while (ancestor != node)
+        {
+            if (node->data > ancestor->data)
+            {
+                // If node's value is greater, update the predecessor and move right
+                predecessor = ancestor;
+                ancestor = ancestor->right;
+            }
+
+            else
+            {
+                // If node's value is smaller, move left
+                ancestor = ancestor->left;
+            }
+        }
+
+        return predecessor;
     }
 }

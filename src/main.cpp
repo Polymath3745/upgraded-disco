@@ -30,8 +30,11 @@ int main()
     tree.insert(9);
     tree.insert(1); */
     
-
-    TreeNode* successor = tree.findSuccessor(tree.root->right->left->left);
+    TreeNode* succesor = tree.findSuccessor(tree.search(7));
+    TreeNode* predecessor = tree.findPredecessor(tree.search(7));
+    
+    std::cout << "The Successor of node " << tree.root->left->right->left->data << " is : " << succesor->data << "\n";
+    std::cout << "The Predecessor of node " << tree.root->left->right->left->data << " is : " << predecessor->data << "\n";
 
     
     // Perform search and retrieve node if found;
