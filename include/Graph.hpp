@@ -37,4 +37,7 @@ class Graph
          * 
          */
         void printGraph();
+
+    private:
+        std::vector<Vertex> vertices;
 };
