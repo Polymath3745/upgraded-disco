@@ -25,7 +25,7 @@ class BinaryTree
         void insert(int val);
 
         // search
-        void search(int val);
+        TreeNode* search(int val);
 
         // delete
         void deleteNode(int val);
@@ -57,9 +57,40 @@ class BinaryTree
          */
         bool isBalanced();
 
+        /**
+         * @brief finds if the tree is a BST or not
+         * 
+         * @return true 
+         * @return false 
+         */
+        bool isBST();
 
-    private:
+        /**
+         * @brief returns the LCA
+         * 
+         * @return int 
+         */
+        int findLCA();
+
+        /**
+         * @brief returns the successor of the given node
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
+        TreeNode* findSuccessor(TreeNode* node);
+
+        /**
+         * @brief returns the predecessor of the given node
+         * 
+         * @param node 
+         * @return TreeNode* 
+         */
+        TreeNode* findPredecessor(TreeNode* node);
+
         TreeNode* root;
+    private:
+        
 
         // inserts iteratively
         TreeNode* insertRecursive(TreeNode* node, int val);
@@ -134,5 +165,23 @@ class BinaryTree
          * @return false 
          */
         bool isBalanced(TreeNode* node, int& height);
+
+        /**
+         * @brief checks if tree is a BST
+         * 
+         * @param minValue 
+         * @param maxValue 
+         */
+        bool isBST(TreeNode* node, int minValue, int maxValue);
+
+        /**
+         * @brief finds the lowest common ancestor of two nodes
+         * 
+         * @param node 
+         * @param node1 
+         * @param node2 
+         * @return int 
+         */
+        int findLCA(TreeNode* node, int node1, int node2);
 };
 #endif

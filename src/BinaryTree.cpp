@@ -2,6 +2,7 @@
 
 #include "Queue.hpp"
 #include "helper.hpp"
+#include <climits>
 
 BinaryTree::BinaryTree()
 : root(nullptr)
@@ -36,7 +37,7 @@ TreeNode* BinaryTree::insertRecursive(TreeNode* node, int val)
 
 }
 
-void BinaryTree::search(int val)
+TreeNode* BinaryTree::search(int val)
 {
     TreeNode* result;
     result = searchRecursive(root, val);
@@ -50,6 +51,8 @@ void BinaryTree::search(int val)
     {
         std::cout << "Node found in tree : " << result->data << std::endl;
     }
+
+    return result;
 }
 
 TreeNode* BinaryTree::searchRecursive(TreeNode* node, int val)
@@ -322,4 +325,122 @@ bool BinaryTree::isBalanced(TreeNode* node, int& height)
     // The tree is unbalanced
     height = 0;
     return false;
+}
+
+bool BinaryTree::isBST()
+{
+    return isBST(root, INT_MIN, INT_MAX);
+}
+
+bool BinaryTree::isBST(TreeNode* node, int min, int max)
+{
+    if (node == nullptr)
+    {
+        return true;
+    }
+
+    if (node->data < min || node->data > max)
+    {
+        return false;
+    }
+
+    // Check left subtree with updated maximum value
+    // and right subtree with updated minimum value
+    return isBST(node->left, min, node->data - 1) && isBST(node->right, node->data + 1, max);
+}
+
+int BinaryTree::findLCA()
+{
+    return findLCA(root, 3, 8);
+}
+
+int BinaryTree::findLCA(TreeNode* node, int node1, int node2)
+{
+    if (node == nullptr)
+    {   
+        // LCA not found
+        return -1;
+    }
+
+    if (node->data > node1 && node->data > node2)
+    {
+        return findLCA(node->left, node1, node2);
+    }
+
+    else if (node->data < node1 && node->data < node2)
+    {
+        return findLCA(node->right, node1, node2);
+    }
+
+    else
+    {
+        return node->data;
+    }
+}
+
+TreeNode* BinaryTree::findSuccessor(TreeNode* node)
+{
+    if(node->right != nullptr)
+    {
+        // Since the node has a right child, find the leftmost node in the right subtree
+        return findMin(node->right);
+    }
+    else
+    {
+        // If the node does not have a right child, find the lowest ancestor with left child
+        TreeNode* successor = nullptr;
+        TreeNode* ancestor = root; // Start from the root of the tree
+
+        while (ancestor != node)
+        {
+            if (node->data < ancestor->data)
+            {
+                // If node's value is smaller, update the successor and move left
+                successor = ancestor;
+                ancestor = ancestor->left;
+            }
+
+            else
+            {
+                // If node's value is greater, move right
+                ancestor = ancestor->right;
+            }
+        }
+
+        return successor;
+    }
+}
+
+TreeNode* BinaryTree::findPredecessor(TreeNode* node)
+{
+    if(node->left != nullptr)
+    {
+        // If the node has a left child, the predecessor is the right most node in the left subtree
+        return findMax(node->left);
+    }
+
+    else
+    {
+        // If the node does not have a left child, find the closest ancestor where the node is in the right subtree
+        TreeNode* predecessor = nullptr;
+        TreeNode* ancestor = root; // Start from the root of the tree
+
+        while (ancestor != node)
+        {
+            if (node->data > ancestor->data)
+            {
+                // If node's value is greater, update the predecessor and move right
+                predecessor = ancestor;
+                ancestor = ancestor->right;
+            }
+
+            else
+            {
+                // If node's value is smaller, move left
+                ancestor = ancestor->left;
+            }
+        }
+
+        return predecessor;
+    }
 }

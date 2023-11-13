@@ -11,6 +11,7 @@ int main()
     BinaryTree tree;
 
     // Insert elements into the tree
+    // balanced tree
     tree.insert(10);
     tree.insert(5);
     tree.insert(3);
@@ -21,10 +22,19 @@ int main()
     tree.insert(11);
     tree.insert(18);
     
+    // unbalanced tree
+/*     tree.insert(5);
+    tree.insert(3);
+    tree.insert(8);
+    tree.insert(2);
+    tree.insert(9);
+    tree.insert(1); */
     
-
-    bool result = tree.isBalanced();
-    std::cout << result << std::endl;
+    TreeNode* succesor = tree.findSuccessor(tree.search(7));
+    TreeNode* predecessor = tree.findPredecessor(tree.search(7));
+    
+    std::cout << "The Successor of node " << tree.root->left->right->left->data << " is : " << succesor->data << "\n";
+    std::cout << "The Predecessor of node " << tree.root->left->right->left->data << " is : " << predecessor->data << "\n";
 
     
     // Perform search and retrieve node if found;
