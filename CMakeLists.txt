@@ -25,6 +25,7 @@ add_executable(MAIN
     src/RecursionExamples.cpp
     src/BinaryTree.cpp
     src/Graph.cpp
+    src/VectorExamples.cpp
     )
 
 # Add your test files
