@@ -47,6 +47,13 @@ class Graph
         
 
     private:
+        /**
+         * @brief recursive implementation of DFS
+         * 
+         * @param vertex 
+         * @param visited 
+         */
         void DFSRecursive(int vertex, std::vector<bool>& visited);
+
         std::vector<Vertex> vertices;
 };

@@ -1,44 +1,29 @@
+#include <iostream>
+
 #include "LinkedList.hpp"
 #include "DoublyLinkedList.hpp"
 #include "DoublyCircular.hpp"
+#include "Queue.hpp"
+#include "Stack.hpp"
 #include "RecursionExamples.hpp"
 #include "BinaryTree.hpp"
-#include <iostream>
+#include "Graph.hpp"
 
 int main()
 {
-    // Create a BinarySearchTree instance
-    BinaryTree tree;
+    Graph myGraph;
 
-    // Insert elements into the tree
-    // balanced tree
-    tree.insert(10);
-    tree.insert(5);
-    tree.insert(3);
-    tree.insert(8);
-    tree.insert(7);
-    tree.insert(15);
-    tree.insert(12);
-    tree.insert(11);
-    tree.insert(18);
-    
-    // unbalanced tree
-/*     tree.insert(5);
-    tree.insert(3);
-    tree.insert(8);
-    tree.insert(2);
-    tree.insert(9);
-    tree.insert(1); */
-    
-    TreeNode* succesor = tree.findSuccessor(tree.search(7));
-    TreeNode* predecessor = tree.findPredecessor(tree.search(7));
-    
-    std::cout << "The Successor of node " << tree.root->left->right->left->data << " is : " << succesor->data << "\n";
-    std::cout << "The Predecessor of node " << tree.root->left->right->left->data << " is : " << predecessor->data << "\n";
+    // Add vertices to the graph
+    myGraph.addVertex(0);
+    myGraph.addVertex(1);
+    myGraph.addVertex(2);
 
-    
-    // Perform search and retrieve node if found;
-    //TreeNode* result = tree.search(2);
+    // Add an edge between vertices 0 and 1
+    myGraph.addEdge(0, 1);
+    myGraph.addEdge(1, 2);
 
+    // Print the graph to visualize the result
+    myGraph.printGraph();
+    myGraph.DFS(0);
     return 0;
 }

@@ -24,3 +24,30 @@ void Graph::printGraph()
         std::cout << std::endl;                  
     }
 }
+
+void Graph::DFS(int startVertex)
+{
+    // Initialize a visited array to keep track of visited vertices
+    std::vector<bool> visited(vertices.size(), false);
+
+    // Call the private recursive function
+    DFSRecursive(startVertex, visited);
+}
+
+void Graph::DFSRecursive(int vertex, std::vector<bool>& visited)
+{
+    // Mark the current vertex as visited
+    visited[vertex] = true;
+
+    // Process the current vertex
+    std::cout << vertex << std::endl;
+
+    // Recur for all the adjacent vertices
+    for (int neighbor : vertices[vertex].neighbors) 
+    {
+        if (!visited[neighbor]) 
+        {
+            DFSRecursive(neighbor, visited);
+        }
+    }
+}
