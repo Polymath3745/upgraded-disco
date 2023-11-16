@@ -38,6 +38,15 @@ class Graph
          */
         void printGraph();
 
+        /**
+         * @brief perform DFS on a graph
+         * 
+         * @param startVertex 
+         */
+        void DFS(int startVertex);
+        
+
     private:
+        void DFSRecursive(int vertex, std::vector<bool>& visited);
         std::vector<Vertex> vertices;
 };
