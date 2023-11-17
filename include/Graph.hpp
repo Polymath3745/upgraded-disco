@@ -1,3 +1,6 @@
+#ifndef GRAPH_HPP
+#define GRAPH_HPP
+
 #include <vector>
 #include <iostream>
 
@@ -89,7 +92,23 @@ class Graph
          */
         bool DFSRecursive(int vertex, std::vector<bool>& visited);
 
+        /**
+         * @brief collection of vertices
+         * 
+         */
         std::vector<Vertex> vertices;
+        
+        /**
+         * @brief used for BFS and DFS functions
+         * 
+         */
         int                 targetVertex;
+
+        /**
+         * @brief used for BFS and DFS function
+         * to determine if target vertex was found
+         * 
+         */
         bool                found{false};
 };
+#endif // GRAPH_HPP
