@@ -39,28 +39,57 @@ class Graph
         void printGraph();
 
         /**
-         * @brief perform DFS on graph
+         * @brief find a target vertex using DFS
          * 
          * @param startVertex 
+         * @param targetVertex 
          */
-        void DFS(int startVertex);
+        void DFS(int startVertex, int target);
 
         /**
-         * @brief perform BFS on graph
+         * @brief searches for target vertex using BFS
          * 
          * @param startVertex 
+         * @param target 
+         * @return true 
+         * @return false 
          */
-        void BFS(int startVertex);
+        bool BFS(int startVertex, int target);
+
+        /**
+         * @brief Get the Found object
+         * 
+         * @return true 
+         * @return false 
+         */
+        bool getFound()
+        {
+            return found;
+        }
+
+        /**
+         * @brief Set the Found object
+         * 
+         * @param toggle 
+         */
+        void setFound(bool toggle)
+        {
+            found = toggle;
+        }
         
 
     private:
         /**
-         * @brief recursive implementation of DFS
+         * @brief performs DFS to find target vertex recursively
          * 
          * @param vertex 
          * @param visited 
+         * @return true 
+         * @return false 
          */
-        void DFSRecursive(int vertex, std::vector<bool>& visited);
+        bool DFSRecursive(int vertex, std::vector<bool>& visited);
 
         std::vector<Vertex> vertices;
+        int                 targetVertex;
+        bool                found{false};
 };

@@ -18,7 +18,7 @@ void Graph::printGraph()
 {
     for (size_t i = 0; i < vertices.size(); i++)
     {
-        std::cout << "Vertex " << vertices[i].m_id << " is connected to: ";
+        std::cout << "Vertex " << vertices[i].m_id << " is connected to vertices: ";
         for (size_t j = 0; j < vertices[i].neighbors.size(); j++)
         {
             std::cout << vertices[i].neighbors[j] << " ";
@@ -27,22 +27,36 @@ void Graph::printGraph()
     }
 }
 
-void Graph::DFS(int startVertex)
+void Graph::DFS(int startVertex, int target)
 {
     // Initialize a visited array to keep track of visited vertices
     std::vector<bool> visited(vertices.size(), false);
 
+    // Set the target vertex
+    targetVertex = target;
+
     // Call the private recursive function
-    DFSRecursive(startVertex, visited);
+    if(!DFSRecursive(startVertex, visited))
+    {
+        std::cout << "Target vertex not found in graph" << std::endl;
+    }
 }
 
-void Graph::DFSRecursive(int vertex, std::vector<bool>& visited)
+bool Graph::DFSRecursive(int vertex, std::vector<bool>& visited)
 {
     // Mark the current vertex as visited
     visited[vertex] = true;
 
     // Process the current vertex
     std::cout << vertex << std::endl;
+
+    // Check if the current vertex is the target
+    if (targetVertex == vertex)
+    {
+        std::cout << "Target vertex found!" << std::endl;
+        found = true;
+        return found;
+    }
 
     // Recur for all the adjacent vertices
     for (int neighbor : vertices[vertex].neighbors) 
@@ -52,9 +66,11 @@ void Graph::DFSRecursive(int vertex, std::vector<bool>& visited)
             DFSRecursive(neighbor, visited);
         }
     }
+
+    return found;
 }
 
-void Graph::BFS(int startVertex)
+bool Graph::BFS(int startVertex, int target)
 {
     // Initialize a visited array to keep track of visited vertices
     std::vector<bool> visited(vertices.size(), false);
@@ -74,6 +90,14 @@ void Graph::BFS(int startVertex)
 
         std::cout << currentVertex << " ";
 
+        // Check if current vertex is the target
+        if (currentVertex == target)
+        {
+            std::cout << "Target vertex found" << std::endl;
+            found = true;
+            return found;
+        }
+
         // Enqueue all neighbors of the dequeued vertex that haven't been visited
         for (int neighbor : vertices[currentVertex].neighbors)
         {
@@ -85,5 +109,5 @@ void Graph::BFS(int startVertex)
         }
     }
 
-    std::cout << std::endl;
+    return found;
 }
