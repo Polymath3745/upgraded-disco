@@ -20,7 +20,7 @@ struct QueueNode
     TreeNode* m_node;
     QueueNode* next;
 };
-// TODO: Perhaps I can make this an interface to get rid of the overloaded functions...
+// TODO: Perhaps I can make this a Template class to get rid of the overloaded functions...
 class Queue
 {
     public:
