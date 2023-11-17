@@ -39,11 +39,18 @@ class Graph
         void printGraph();
 
         /**
-         * @brief perform DFS on a graph
+         * @brief perform DFS on graph
          * 
          * @param startVertex 
          */
         void DFS(int startVertex);
+
+        /**
+         * @brief perform BFS on graph
+         * 
+         * @param startVertex 
+         */
+        void BFS(int startVertex);
         
 
     private:

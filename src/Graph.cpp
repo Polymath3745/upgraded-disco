@@ -1,5 +1,7 @@
 #include "Graph.hpp"
 
+#include "Queue.hpp"
+
 void Graph::addVertex(int id)
 {
     vertices.emplace_back(id);
@@ -50,4 +52,38 @@ void Graph::DFSRecursive(int vertex, std::vector<bool>& visited)
             DFSRecursive(neighbor, visited);
         }
     }
+}
+
+void Graph::BFS(int startVertex)
+{
+    // Initialize a visited array to keep track of visited vertices
+    std::vector<bool> visited(vertices.size(), false);
+
+    // Create a queue for BFS
+    Queue bfsQueue;
+
+    // Mark the current vertex as visited and enqueue it
+    visited[startVertex] = true;
+    bfsQueue.enqueue(startVertex);
+
+    while(!bfsQueue.isEmpty())
+    {
+        // Dequeue a vertex from the queue and process it
+        int currentVertex = bfsQueue.peek();
+        bfsQueue.dequeue();
+
+        std::cout << currentVertex << " ";
+
+        // Enqueue all neighbors of the dequeued vertex that haven't been visited
+        for (int neighbor : vertices[currentVertex].neighbors)
+        {
+            if (!visited[neighbor])
+            {
+                visited[neighbor] = true;
+                bfsQueue.enqueue(neighbor);
+            }
+        }
+    }
+
+    std::cout << std::endl;
 }
