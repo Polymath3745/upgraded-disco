@@ -22,7 +22,7 @@ struct PriorityQueueNode
      * @brief nodes next pointer
      * 
      */
-    PriorityQueue* next;
+    PriorityQueueNode* next;
 };
 
 class PriorityQueue
@@ -32,11 +32,7 @@ class PriorityQueue
          * @brief Construct a new Priority Queue object
          * 
          */
-        PriorityQueue()
-        : front(nullptr)
-        {
-
-        }
+        PriorityQueue();
 
         /**
          * @brief enqueues a node 
