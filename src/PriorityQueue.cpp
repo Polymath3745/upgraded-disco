@@ -40,3 +40,22 @@ void PriorityQueue::enqueue(int data, int priority)
         }
     }
 }
+
+bool PriorityQueue::isEmpty() const
+{
+    return front == nullptr;
+}
+
+PriorityQueueNode* PriorityQueue::dequeue()
+{
+    if(isEmpty())
+    {
+        return nullptr;
+    }
+
+    PriorityQueueNode* temp = front;
+    front = front->next;
+    temp->next = nullptr;
+
+    return temp;
+}

@@ -46,7 +46,7 @@ class PriorityQueue
          * @brief dequeues a node
          * 
          */
-        void dequeue();
+        PriorityQueueNode* dequeue();
 
         /**
          * @brief checks if the priority queue is empty
