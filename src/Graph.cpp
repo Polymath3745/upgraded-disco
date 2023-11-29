@@ -88,7 +88,7 @@ bool Graph::BFS(int startVertex, int target)
         int currentVertex = bfsQueue.peek();
         bfsQueue.dequeue();
 
-        std::cout << currentVertex << " ";
+        std::cout << currentVertex << " - current vertex " << std::endl;
 
         // Check if current vertex is the target
         if (currentVertex == target)
