@@ -1,3 +1,6 @@
+#ifndef PRIORITYQUEUE_HPP
+#define PRIORITYQUEUE_HPP
+
 struct PriorityQueueNode
 {
     PriorityQueueNode(int data, int priority)
@@ -66,3 +69,4 @@ class PriorityQueue
          */
         PriorityQueueNode* front;
 };
+#endif

@@ -1,3 +1,6 @@
+#ifndef DOUBLYCIRCULAR_HPP
+#define DOUBLYCIRCULAR_HPP
+
 struct CircleNode
 {
     CircleNode(int data)
@@ -41,3 +44,4 @@ class DoublyCircular
         CircleNode* head;
 
 };
+#endif

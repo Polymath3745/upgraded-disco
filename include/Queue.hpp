@@ -1,3 +1,6 @@
+#ifndef QUEUE_HPP
+#define QUEUE_HPP
+
 #include <iostream>
 #include "BinaryTree.hpp"
 
@@ -54,3 +57,4 @@ class Queue
         QueueNode* front;
         QueueNode* rear;
 };
+#endif
