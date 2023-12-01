@@ -53,12 +53,12 @@ class WeightedGraph
         void addVertex(int id);
 
         /**
-         * @brief adds an edge 
+         * @brief adds an edge between two vertices
          * 
          * @param source 
          * @param destination 
          */
-        void addEdge(int source, int destination);
+        void addEdge(int source, int destination, int weight);
         
 
     private:
